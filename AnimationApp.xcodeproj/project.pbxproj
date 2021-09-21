@@ -56,15 +56,47 @@
 		888D45AF26FA465900BA11E4 /* AnimationApp */ = {
 			isa = PBXGroup;
 			children = (
-				888D45B026FA465900BA11E4 /* AppDelegate.swift */,
-				888D45B226FA465900BA11E4 /* SceneDelegate.swift */,
-				888D45B426FA465900BA11E4 /* ViewController.swift */,
-				888D45B626FA465900BA11E4 /* Main.storyboard */,
-				888D45B926FA465900BA11E4 /* Assets.xcassets */,
-				888D45BB26FA465900BA11E4 /* LaunchScreen.storyboard */,
-				888D45BE26FA465900BA11E4 /* Info.plist */,
+				888D45C626FA480400BA11E4 /* App */,
+				888D45C526FA47E700BA11E4 /* ViewControllers */,
+				888D45C426FA47DA00BA11E4 /* Storuboards */,
+				888D45C726FA480F00BA11E4 /* Resources */,
 			);
 			path = AnimationApp;
+			sourceTree = "<group>";
+		};
+		888D45C426FA47DA00BA11E4 /* Storuboards */ = {
+			isa = PBXGroup;
+			children = (
+				888D45B626FA465900BA11E4 /* Main.storyboard */,
+				888D45BB26FA465900BA11E4 /* LaunchScreen.storyboard */,
+			);
+			path = Storuboards;
+			sourceTree = "<group>";
+		};
+		888D45C526FA47E700BA11E4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				888D45B426FA465900BA11E4 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		888D45C626FA480400BA11E4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				888D45B026FA465900BA11E4 /* AppDelegate.swift */,
+				888D45B226FA465900BA11E4 /* SceneDelegate.swift */,
+				888D45BE26FA465900BA11E4 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		888D45C726FA480F00BA11E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				888D45B926FA465900BA11E4 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQ7NB58NL6;
-				INFOPLIST_FILE = AnimationApp/Info.plist;
+				INFOPLIST_FILE = AnimationApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftbook.AnimationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQ7NB58NL6;
-				INFOPLIST_FILE = AnimationApp/Info.plist;
+				INFOPLIST_FILE = AnimationApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftbook.AnimationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
