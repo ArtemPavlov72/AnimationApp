@@ -97,6 +97,11 @@
                     <connections>
                         <outlet property="animationButton" destination="3qj-J9-nqr" id="CpO-Dh-aJ2"/>
                         <outlet property="animationsView" destination="8pX-M5-5hg" id="mQm-4K-wID"/>
+                        <outlet property="curveLabel" destination="H9r-4d-LZ4" id="Bqb-tJ-Sv8"/>
+                        <outlet property="delayLabel" destination="sp8-BB-tCO" id="PL3-BN-wG6"/>
+                        <outlet property="durationLabel" destination="zp4-g0-Qsm" id="33n-4C-HDx"/>
+                        <outlet property="forceLabel" destination="FGS-9r-BSH" id="Xvi-OG-UY0"/>
+                        <outlet property="presetLabel" destination="mEc-0o-pLR" id="EgV-yd-Lal"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
