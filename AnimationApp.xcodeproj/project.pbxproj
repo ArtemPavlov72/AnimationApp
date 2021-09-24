@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3AF5CFB03CFBCFB114E00E25 /* Pods_AnimationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3C8B8ECEEB52DD8DC1FC07 /* Pods_AnimationApp.framework */; };
+		886E9B2926FCEE3700E19C0E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B2826FCEE3700E19C0E /* DataManager.swift */; };
 		888D45B126FA465900BA11E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D45B026FA465900BA11E4 /* AppDelegate.swift */; };
 		888D45B326FA465900BA11E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D45B226FA465900BA11E4 /* SceneDelegate.swift */; };
 		888D45B526FA465900BA11E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D45B426FA465900BA11E4 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		886E9B2826FCEE3700E19C0E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		888D45AD26FA465900BA11E4 /* AnimationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888D45B026FA465900BA11E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		888D45B226FA465900BA11E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		886E9B2A26FCEE3C00E19C0E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				886E9B2826FCEE3700E19C0E /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		888D45A426FA465900BA11E4 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 				888D45C826FA586F00BA11E4 /* Models */,
 				888D45C626FA480400BA11E4 /* App */,
 				888D45C726FA480F00BA11E4 /* Resources */,
+				886E9B2A26FCEE3C00E19C0E /* Services */,
 			);
 			path = AnimationApp;
 			sourceTree = "<group>";
@@ -249,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				888D45B526FA465900BA11E4 /* ViewController.swift in Sources */,
+				886E9B2926FCEE3700E19C0E /* DataManager.swift in Sources */,
 				888D45B126FA465900BA11E4 /* AppDelegate.swift in Sources */,
 				888D45CA26FA58A300BA11E4 /* Animation.swift in Sources */,
 				888D45B326FA465900BA11E4 /* SceneDelegate.swift in Sources */,

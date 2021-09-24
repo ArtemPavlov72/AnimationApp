@@ -12,11 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet var animationsView: SpringView!
     @IBOutlet var animationButton: SpringButton!
     
-    @IBOutlet var presetLabel: UILabel!
-    @IBOutlet var curveLabel: UILabel!
-    @IBOutlet var forceLabel: UILabel!
-    @IBOutlet var durationLabel: UILabel!
-    @IBOutlet var delayLabel: UILabel!
+    // не нужно делать отдельные лейблы, достаточно одного
+   
     
     private var animationStarted = false
     
