@@ -9,52 +9,31 @@ import Spring
 
 class ViewController: UIViewController {
     
+    //MARK: IB Outlets
     @IBOutlet var animationsView: SpringView!
-    @IBOutlet var animationButton: SpringButton!
+    @IBOutlet var animationLabel: UILabel!
     
-    // не нужно делать отдельные лейблы, достаточно одного
-   
+    //MARK: private properties
     
-    private var animationStarted = false
-    
-    var animationType = Animation.getAnimation()
+    private var animation = Animation.getAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getNextAnimationText()
-        getButtonText()
-    }
-    
-    private func getNextAnimationText() {
-        presetLabel.text = "Preset: \(animationType.preset)"
-        curveLabel.text = "Curve: \(animationType.curve)"
-        forceLabel.text = "Force: \(String(format: "%.2f", animationType.force))"
-        durationLabel.text = "Duration: \(String(format: "%.2f", animationType.duration))"
-        delayLabel.text = "Delay: \(String(format: "%.2f", animationType.delay))"
-    }
-    
-    private func getButtonText() {
-        if animationStarted {
-            animationButton.setTitle("Run \(animationType.preset)", for: .normal)
-        } else {
-            animationButton.setTitle("Run", for: .normal)
-        }
+        animationLabel.text = animation.description
     }
     
     @IBAction func runAnimationButton(_ sender: SpringButton) {
-        animationStarted = true
-        getNextAnimationText()
+        animationLabel.text = animation.description
         
-        animationsView.animation = animationType.preset
-        animationsView.curve = animationType.curve
-        animationsView.force = CGFloat(animationType.force)
-        animationsView.duration = CGFloat(animationType.duration)
-        animationsView.delay = CGFloat(animationType.delay)
+        animationsView.animation = animation.preset
+        animationsView.curve = animation.curve
+        animationsView.force = CGFloat(animation.force)
+        animationsView.duration = CGFloat(animation.duration)
+        animationsView.delay = CGFloat(animation.delay)
         animationsView.animate()
         
-        animationType = Animation.getAnimation()
-        getButtonText()
+        animation = Animation.getAnimation()
+        sender.setTitle("Run \(animation.preset)", for: .normal)
     }
-    
 }
 
