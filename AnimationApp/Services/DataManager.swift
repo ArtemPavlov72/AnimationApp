@@ -2,7 +2,7 @@
 //  DataManager.swift
 //  AnimationApp
 //
-//  Created by iMac on 23.09.2021.
+//  Created by Pavlov Artem on 21.09.2021.
 //
 
 import Spring

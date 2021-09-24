@@ -8,42 +8,30 @@
 import Foundation
 
 struct Animation {
-    var preset: String
-    var curve: String
-    var force: Float // 0.1 - 3.0
-    var duration: Float // 0.5 - 2.0
-    var delay: Float // 0.2 - 1/0
+    let preset: String
+    let curve: String
+    let force: Float
+    let duration: Float
+    let delay: Float
     
-    
-}
-extension Animation {
-    static func getAnimation() -> Animation {
-        
-        var animation: Animation =
-            .init(preset: "", curve: "", force: 0, duration: 0, delay: 0)
-        
-        let animationPresets: [String] = [
-            "shake", "pop", "morph", "squeeze", "wobble", "swing", "flipX",
-            "flipY", "fall", "squeezeLeft", "squeezeRight", "squeezeDown",
-            "squeezeUp", "slideLeft", "slideRight", "slideDown", "slideUp",
-            "fadeIn", "fadeOut", "fadeInLeft", "fadeInRight", "fadeInDown",
-            "fadeInUp", "zoomIn", "zoomOut", "flash"
-        ]
-        
-        let animationCurves: [String] = [
-            "easeIn", "easeOut", "easeInOut", "easeInOut", "linear",
-            "spring", "easeInSine", "easeOutSine", "easeInOutSine",
-            "easeInQuad", "easeOutQuad", "easeInOutQuad", "easeInCubic",
-            "easeOutCubic", "easeInOutCubic", "easeInQuart", "easeOutQuart"
-        ]
-        
-        animation.preset = animationPresets.randomElement() ?? ""
-        animation.curve = animationCurves.randomElement() ?? ""
-        animation.force = Float.random(in: 0.1...3.0)
-        animation.duration = Float.random(in: 0.5...2.0)
-        animation.delay = Float.random(in: 0.1...1.0)
-        
-        return animation
+    var description: String {
+        """
+        preset: \(preset)
+        curve: \(curve)
+        force: \(force)
+        duration: \(duration)
+        delay: \(delay)
+        """
     }
     
+    static func getAnimation() -> Animation {
+        
+        Animation (
+            preset: DataManager.share.animationPresets.randomElement()?.rawValue ?? "preset",
+            curve: DataManager.share.curvePresets.randomElement()?.rawValue ?? "curve",
+            force: Float.random(in: 0.1...3.0),
+            duration: Float.random(in: 0.8...2.0),
+            delay: Float.random(in: 0.2...1.0)
+        )
+    }
 }
